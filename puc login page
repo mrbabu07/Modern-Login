@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Form | Dan Aleko</title>
+  <link rel="stylesheet" href="login.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body >
+  <div>
+    <nav>
+        
+        <a class="active" href=" # ">Home</a>
+        <a href="#">News</a>
+        <a href="#">about Us</a>
+        <a href="#">department</a>
+        <a href="#">Contract</a>
+        <a href="#">Help</a>
+        </nav>
+    </div>
+  
+  <!-- <div  class="wrapper">
+    <form action="">
+      <h1>PUIAS LOGIN</h1>
+      <div class="input-box">
+        <input type="text" placeholder="Username" id="username" required >
+        <i class='bx bxs-user'></i>
+      </div>
+      <div class="input-box">
+        <input type="password" placeholder="Password" id="password" required >
+        <i class='bx bxs-lock-alt' ></i>
+      </div>
+      <div class="remember-forgot">
+        <label><input type="checkbox">Remember Me</label>
+        <a href="#">Forgot Password</a>
+      </div>
+      
+      <button type="submit" class="btn" onclick="func()">Login</button>
+      <div class="register-link">
+        <p>Dont have an account? <a href="#">Register</a></p>
+   
+      </div>
+    
+    </form>
+  </div>
+  <div id="next-page-link" style="display:none;">
+    <a href="homepage.html">Go to Homepage</a>
+</div>
+  
+  <script>
+    function func() {
+        var email = document.getElementById("username").value;
+        var password = document.getElementById("password").value;
+
+        if (email === 'mdjahedulislam@gmail.com' && password === '123456') {
+            alert("Successfully logged in!");
+            window.location.href("homepage.html");
+            document.getElementById("next-page-link").style.display = "block";
+            return false; // Prevent form submission
+        } else {
+            alert("Wrong user ID or password.");
+            return false; // Prevent form submission
+        }
+    }
+    
+
+</script> -->
+<div class="wrapper">
+  <form id="loginForm">
+      <h1>PUIAS LOGIN</h1>
+      <div class="input-box">
+          <input type="text" placeholder="Username" id="username" required>
+          <i class='bx bxs-user'></i>
+      </div>
+      <div class="input-box">
+          <input type="password" placeholder="Password" id="password" required>
+          <i class='bx bxs-lock-alt'></i>
+      </div>
+      <div class="remember-forgot">
+          <label><input type="checkbox">Remember Me</label>
+          <a href="#">Forgot Password</a>
+      </div>
+      <button type="submit" class="btn" onclick="return func(event)">Login</button>
+      <div class="register-link">
+          <p>Don't have an account? <a href="#">Register</a></p>
+      </div>
+  </form>
+</div>
+<div id="next-page-link" style="display:none;">
+  <a href="homepage.html">Go to Homepage</a>
+</div>
+
+<script>
+  function func(event) {
+      event.preventDefault(); // Prevent the form from submitting the traditional way
+
+      var email = document.getElementById("username").value;
+      var password = document.getElementById("password").value;
+
+      if (email === 'mdjahedulislam@gmail.com' && password === '123456') {
+          // alert("Successfully logged in!");
+          window.location.href = "homepage.html"; // Correct the window.location.href syntax
+          return false; // Prevent form submission
+      } else {
+          alert("Wrong user ID or password.");
+          return false; // Prevent form submission
+      }
+  }
+</script>
+
+</body>
+</html>
